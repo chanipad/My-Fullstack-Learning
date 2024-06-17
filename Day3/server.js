@@ -4,4 +4,9 @@ const app = express()
 app.get('/', (req, res) => {
     res.send('Hello World! by express')
 })
-app.listen(5500)
+
+app.get('/hello/:name', (req, res) => {
+    res.send('hello ' + req.params.name)
+})
+
+app.listen(3001)
